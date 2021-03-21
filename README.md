@@ -7,7 +7,7 @@ This is a tool to parse the log files and retrieve unique number of IPs, Top 3 M
 ### Prerequisites
 
 - Node 10
-- Yarn 1.2
+- Yarn 1.13
 
 ## Available Scripts
 

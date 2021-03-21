@@ -93,11 +93,10 @@ const ResultsPanel: FC<Props> = (props: Props) => {
 };
 
 export default ResultsPanel;
-/**
- * Styled components at the bottom of the file, this is the definition of the css stylings.
- * Note that styled components are able to pass in props to define styling.
- */
 
+/**
+ * Styled components that define the css stylings of Results displayed.
+ */
 const Results = styled.div`
   display: flex;
   flex-direction: row;

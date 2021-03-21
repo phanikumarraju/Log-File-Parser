@@ -5,6 +5,9 @@ import styled from "styled-components";
 import { LogParser } from "../utils/Parser";
 
 const Home: FC = () => {
+  /**
+   * Initiate the required states
+   */
   const [headerTitle, setHeaderTitle] = React.useState(
     "Let's do Log file parsing here !"
   );
@@ -16,6 +19,9 @@ const Home: FC = () => {
   });
   const [showResults, setShowResults] = React.useState(false);
   const [showErrorMessage, setShowErrorMessage] = React.useState(false);
+  /**
+   * Choose and upload the file
+   */
   let fileReader: FileReader;
   const onUploadFile = React.useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -26,15 +32,26 @@ const Home: FC = () => {
     },
     []
   );
+  /**
+   * Assign the file content from reader for further processing
+   */
   const handleFileRead = () => {
     const content: any = fileReader.result;
     setLogContent(content);
   };
+  /**
+   * Retrieve the content as text from the chosen file
+   * @param file chosen to parse
+   */
   const handleFileChosen = (file: File) => {
     fileReader = new FileReader();
     fileReader.onloadend = handleFileRead;
     fileReader.readAsText(file);
   };
+  /**
+   * Uses the util for parsing and update the states
+   * @param logData the content of the log file
+   */
   const handleParsing = (logData: any) => {
     setShowResults(false);
     const results = LogParser(logData);
@@ -89,6 +106,9 @@ const Home: FC = () => {
 
 export default Home;
 
+/**
+ * Styled components that define the css stylings of Home page content.
+ */
 const HomeContainer = styled.div``;
 const MainContent = styled.div`
   padding: 50px;
