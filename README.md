@@ -48,7 +48,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 Runs prettier on appropriate files with excluded files based on ignore file, will ensure code formatting is adhered to.
 
-### Source (`./src`) folder structure
+### Project folder structure
 
 ```bash
  - public                  # static assets (i.e. images)
