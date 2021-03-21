@@ -12,7 +12,6 @@ describe("<Header />", () => {
   test("render logos", () => {
     const mockTitle = "Here is the title";
     render(<Header title={mockTitle} />);
-    expect(screen.getByAltText("logo")).toBeDefined();
     expect(screen.getByAltText("react")).toBeDefined();
   });
 });
