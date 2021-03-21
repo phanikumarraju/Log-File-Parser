@@ -11,12 +11,10 @@ export interface Props {
 const Header: FC<Props> = (props: Props) => {
   const { title } = props;
   const icons = {
-    company: "./icons/DigIO.png",
     react: "./icons/react.svg",
   };
   return (
     <HeaderContainer>
-      <Logo src={icons.company} alt="logo" />
       <Logo src={icons.react} alt="react" />
       <HeaderContent>{title}</HeaderContent>
     </HeaderContainer>
